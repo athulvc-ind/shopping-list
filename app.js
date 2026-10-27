@@ -39,6 +39,7 @@ function addTask() {
 
     const dltBtn = document.createElement("button");
     dltBtn.textContent = "Delete";
+    dltBtn.classList.add("delete-btn");
     dltBtn.addEventListener("click", function () {
         taskToDelete = li;
         deleteModal.style.display = 'flex';
