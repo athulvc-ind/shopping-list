@@ -12,6 +12,7 @@ body {
     padding: 50px;
     background-color: lightgray;
     border-radius: 15px;
+    margin-top: 110px;
     
 }
 .main h1{
@@ -72,6 +73,10 @@ body {
 .main li span:focus {
     background-color: #fff;
     border: 1px solid #4a6fa5;
+}
+
+#btn2 {
+    display: none;
 }
 
 .main .btn2{

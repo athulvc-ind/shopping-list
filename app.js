@@ -1,6 +1,7 @@
 const input = document.getElementById('input');
 const btn1 = document.getElementById('btn1');
 const list = document.getElementById('list');
+const clearBtn = document.getElementById('btn2');
 
 function addTask() {
     const value = input.value.trim();
@@ -43,11 +44,17 @@ function addTask() {
     li.appendChild(dltBtn);
 
     list.appendChild(li);
+    clearBtn.style.display = 'inline-flex';
     input.value = "";
     input.focus();
 }
 
 btn1.addEventListener("click", addTask);
+
+clearBtn.addEventListener('click', () => {
+    list.innerHTML = "";
+    clearBtn.style.display = 'none';
+});
 
 input.addEventListener("keydown", function (event) {
     if (event.key === "Enter") {
