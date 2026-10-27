@@ -2,6 +2,10 @@ const input = document.getElementById('input');
 const btn1 = document.getElementById('btn1');
 const list = document.getElementById('list');
 const clearBtn = document.getElementById('btn2');
+const deleteModal = document.getElementById('deleteModal');
+const confirmDelete = document.getElementById('confirmDelete');
+const cancelDelete = document.getElementById('cancelDelete');
+let taskToDelete = null;
 
 function addTask() {
     const value = input.value.trim();
@@ -36,10 +40,8 @@ function addTask() {
     const dltBtn = document.createElement("button");
     dltBtn.textContent = "Delete";
     dltBtn.addEventListener("click", function () {
-        if (confirm("do you want to remove it")) {
-            li.remove();
-            alert("Task deleted successfully!");
-        }
+        taskToDelete = li;
+        deleteModal.style.display = 'flex';
     });
     li.appendChild(dltBtn);
 
@@ -54,6 +56,19 @@ btn1.addEventListener("click", addTask);
 clearBtn.addEventListener('click', () => {
     list.innerHTML = "";
     clearBtn.style.display = 'none';
+});
+
+confirmDelete.addEventListener('click', () => {
+    if (taskToDelete) {
+        taskToDelete.remove();
+        taskToDelete = null;
+    }
+    deleteModal.style.display = 'none';
+});
+
+cancelDelete.addEventListener('click', () => {
+    taskToDelete = null;
+    deleteModal.style.display = 'none';
 });
 
 input.addEventListener("keydown", function (event) {
