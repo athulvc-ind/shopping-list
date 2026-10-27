@@ -1,0 +1,88 @@
+body {
+    background-color: antiquewhite;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+    
+    
+}
+
+
+.main{
+    width: 850px;
+    margin: 0 auto;
+    padding: 50px;
+    background-color: lightgray;
+    border-radius: 15px;
+    
+}
+.main h1{
+    text-align: center;
+    color: darkblue;
+}
+
+.main input[type="text"]{
+    width: 70%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-right: 10px;
+}
+
+.main button{
+    padding: 10px 20px;
+    background-color: darkblue;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    box-sizing: border-box;
+    width: 100px;
+    height: 40px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.main button:hover{
+    background-color: green;
+}
+
+.main ul{
+    list-style-type: none;
+    padding: 0;
+}
+.main li{
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+    display: flex;
+    justify-content:flex-start;
+    gap: 10px;
+    align-items: center;
+}
+
+.main li span {
+    margin-right: auto;
+    flex: 1 1 auto;
+    min-width: 180px;
+    padding: 6px 8px;
+    border-radius: 5px;
+    outline: none;
+    box-sizing: border-box;
+}
+
+.main li span:focus {
+    background-color: #fff;
+    border: 1px solid #4a6fa5;
+}
+
+.main .btn2{
+    padding: 5px 10px;
+    background-color: darkblue;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.main .btn2:hover{
+    background-color: red;
+}
